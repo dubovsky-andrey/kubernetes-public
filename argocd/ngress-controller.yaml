@@ -1,4 +1,3 @@
-# apps/ingress-nginx/application.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -6,13 +5,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://kubernetes.github.io/ingress-nginx
-    chart: ingress-nginx
-    targetRevision: 4.14.3
-    helm:
-      valueFiles:
-        - values/ingress-nginx.yaml
+  sources:
+    - repoURL: https://kubernetes.github.io/ingress-nginx
+      chart: ingress-nginx
+      targetRevision: 4.14.3
+      helm:
+        valueFiles:
+          - $values/apps/nginx-controller/ingress-nginx.yaml
+    - repoURL: https://github.com/your-org/kubernetes-public  # твой репо
+      targetRevision: HEAD
+      ref: values
   destination:
     server: https://kubernetes.default.svc
     namespace: ingress
