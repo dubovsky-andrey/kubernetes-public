@@ -21,6 +21,3 @@ spec:
           command:
             - /bin/bash
             - /opt/scripts/start.sh
-          volumeMounts:
-            - name: grafana-script
-              mountPath: /opt/scripts

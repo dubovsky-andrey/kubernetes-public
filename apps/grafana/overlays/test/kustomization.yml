@@ -18,13 +18,6 @@ patches:
       kind: Service
       name: grafana
 
-  - path: pv-patch.yml
-    target:
-      group: ""
-      version: v1
-      kind: PersistentVolume
-      name: grafana-pv
-
   - path: deployment-script-patch.yml
     target:
       group: apps
