@@ -1,9 +1,0 @@
-# Service
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: homarr
-spec:
-  selector:
-    app: homarr

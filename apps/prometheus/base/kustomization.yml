@@ -1,5 +1,3 @@
 resources:
   - deployment.yml
   - service.yml
-  - pvc.yml
-  - pv.yml
