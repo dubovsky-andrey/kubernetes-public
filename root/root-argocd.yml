@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Dubovsky-Andrey/kubernetes-public
+    repoURL: https://github.com/dubovsky-andrey/kubernetes-public
     path: argocd
     targetRevision: HEAD
   destination:
