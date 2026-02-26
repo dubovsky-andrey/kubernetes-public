@@ -20,10 +20,3 @@ spec:
           image: grafana/grafana:latest
           ports:
             - containerPort: 80
-          volumeMounts:
-            - name: grafana-storage
-              mountPath: /var/lib/grafana
-      volumes:
-        - name: grafana-storage
-          persistentVolumeClaim:
-            claimName: grafana-pvc
