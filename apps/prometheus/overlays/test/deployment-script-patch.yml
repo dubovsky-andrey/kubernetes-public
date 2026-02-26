@@ -19,6 +19,3 @@ spec:
           command:
             - /bin/bash
             - /opt/scripts/start.sh
-          volumeMounts:
-            - name: prometheus-script
-              mountPath: /opt/scripts
