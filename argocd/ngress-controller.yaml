@@ -12,7 +12,7 @@ spec:
       helm:
         valueFiles:
           - $values/apps/nginx-controller/ingress-nginx.yaml
-    - repoURL: https://github.com/your-org/kubernetes-public  # твой репо
+    - repoURL: https://github.com/dubovsky-andrey/kubernetes-public
       targetRevision: HEAD
       ref: values
   destination:
